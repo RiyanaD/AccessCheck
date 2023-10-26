@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#create-report">Create Report</a></li>
+        </ul>
+    </nav>
+    <!-- <div id = "intro">
+        <p>Digital Accessibility refers to the practice of building inclusive technologies which are usable by users of diverse abilities. When building web applications, many of them go unchecked for how accessible they are and how well accessibility tools like screen-readers and keyboard navigation software may work with these applications. AccessCheck is a solution designed to make the digital world accessible to all by offering an efficient method to test and enhance the accessibility of any organization's web application.</p>
+    </div>
+    <div><img src="{{ url_for('static', filename='AC.png') }}" alt="Description of the image"></div> -->
+    <div class="container1">
+        <div class="column1">
+            <div id="intro">
+                <p>Digital Accessibility refers to the practice of building inclusive technologies which are usable by users of diverse abilities. When building web applications, many of them go unchecked for how accessible they are and how well accessibility tools like screen-readers and keyboard navigation software may work with these applications. AccessCheck is a solution designed to make the digital world accessible to all by offering an efficient method to test and enhance the accessibility of any organization's web application.</p>
+            </div>
+        </div>
+        <div class="column2">
+            <img src="{{ url_for('static', filename='AC.png') }}" alt="Description of the image" class="rounded-image">
+        </div>
+    </div>
+
+    </div>
+    <div class="centered-wrapper">
+        <form id="urlForm" method="post">
+            <label for="url">Enter URL:</label>
+            <input type="text" name="url" id="url" required>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+            <!-- Display accessibility issues in separate divs -->
+            <div id="resultDiv">
+                <div class="accessibility-div" id="imageAltDiv">
+                    <h2>Images without the alt attribute found</h2>
+                    <p>Fail to meet Guideline 1.1: Provide text alternatives for non-text content.
+                    </p>
+                    <button class="more-info-button" data-title="Image without alt attribute">Click for more info</button>
+                </div>
+        
+                <!-- Div for language issues -->
+                <div class="accessibility-div" id="languageDiv">
+                    <h2>Language attribute not found</h2>
+                    <p>Fail to meet Success Criterion 3.1.1: Language of Page</p>
+                    <button class="more-info-button" data-title="lang attribute present in the HTML document.">Click for more info</button>
+                </div>
+        
+                <!-- Div for form labels issues -->
+                <div class="accessibility-div" id="formLabelsDiv">
+                    <h2>Form elements without corresponding labels found</h2>
+                    <p>Fail to meet Guideline 3.3: Input Assistance, it is essential to associate form elements with their corresponding labels.</p>
+                    <button class="more-info-button" data-title="Form element without corresponding label">Click for more info</button>
+                </div>
+                
+                <div class="accessibility-div" id="linkDescriptionDiv">
+                    <h2>Links without descriptive texts found</h2>
+                    <p>Fail to meet Success Criterion 2.4.4: Provide link text that identifies the purpose of the link without needing additional context</p>
+                    <button class="more-info-button" data-title="Non-descriptive links">Click for more info</button>
+                </div>
+
+                <div></div>
+                <div id="moreInfoModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal()">&times;</span>
+                        <h2 id="modalTitle"></h2>
+                        <ul id="modalList"></ul>
+                    </div>
+                </div>
+            </div>
+    </div>
+        <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
