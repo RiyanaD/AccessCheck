@@ -13,3 +13,7 @@ Above is the report generated when inputting the petSmart website.
 ![alt text](https://github.com/RiyanaD/AccessCheck/blob/main/static/w3school.png)
 
 ## Usage instructions
+```bash
+git clone https://github.com/RiyanaD/AccessCheck.git
+python app.py # start the flask server
+```
