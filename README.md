@@ -6,4 +6,10 @@ Digital Accessibility refers to the practice of building inclusive technologies 
 
 The user inputs the url link to the web application they would like to recieve a digital accessibility report for. 
 ![alt text](https://github.com/RiyanaD/AccessCheck/blob/main/static/petSmart.png)
-The application sends the inputted url to the flask server with a POST request. The flaskServer retrieves the inputted urls html content and sends it to a python script to flag any violations of Web Content Accessibility Guidelines (WCAG) detected in the html script. 
+The application sends the inputted url to the flask server with a POST request. The flaskServer retrieves the inputted urls html content and sends it to a python script to flag any violations of Web Content Accessibility Guidelines (WCAG) detected in the html script. The python script utilizes the Beautiful Soup library to parse specific html tags.
+
+Above is the report generated when inputting the petSmart website. 
+
+![alt text](https://github.com/RiyanaD/AccessCheck/blob/main/static/w3school.png)
+
+## Usage instructions
